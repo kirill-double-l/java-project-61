@@ -3,6 +3,7 @@ plugins {
     id("com.github.ben-manes.versions") version "0.53.0"
     id("application")
     id("org.sonarqube") version "6.3.1.5724"
+    id("checkstyle")
 }
 
 group = "hexlet.code"
@@ -36,4 +37,9 @@ sonar {
         property("sonar.projectKey", "kirill-double-l_java-project-61")
         property("sonar.organization", "kirill-double-l")
     }
+}
+
+checkstyle {
+    toolVersion = "10.17.0" // актуальная версия Checkstyle
+    configFile = file("config/checkstyle/checkstyle.xml")
 }

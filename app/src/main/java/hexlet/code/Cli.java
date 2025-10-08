@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Cli {
     private static String name;
 
-    public static void inputName (){
+    public static void inputName() {
         Scanner scanner = new Scanner(System.in);
         name = scanner.nextLine();
     }
