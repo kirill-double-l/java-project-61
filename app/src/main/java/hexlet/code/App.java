@@ -2,11 +2,20 @@ package hexlet.code;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        System.out.println("Please enter the game number and press Enter");
+        System.out.println("1 - Greet\n2 - Even\n0 - Exit");
+        Cli.inputGame();
+        System.out.println("Your choice: " + Cli.getGame());
 
-        Cli.inputName();
-       // System.out.println(Cli.name);
-        System.out.println("Hello, " + Cli.getName() + "!");
+        switch (Cli.getGame()) {
+            case 1:
+                GreetGame.sayHello();
+                break;
+            case 2:
+                EvenGame.startGame();
+                break;
+            case 0:
+                break;
+        }
     }
 }

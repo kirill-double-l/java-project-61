@@ -2,3 +2,5 @@
 [![Actions Status](https://github.com/kirill-double-l/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kirill-double-l/java-project-61/actions)
 
 [![SonarQube](https://github.com/kirill-double-l/java-project-61/actions/workflows/build.yml/badge.svg)](https://github.com/kirill-double-l/java-project-61/actions/workflows/build.yml)
+
+[![asciicast](https://asciinema.org/a/BCso813Z7gYzg2zrQ460DsGUg.svg)](https://asciinema.org/a/BCso813Z7gYzg2zrQ460DsGUg)
