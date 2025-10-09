@@ -14,7 +14,7 @@ public class App {
             case 2:
                 EvenGame.startGame();
                 break;
-            case 0:
+            default:
                 break;
         }
     }
