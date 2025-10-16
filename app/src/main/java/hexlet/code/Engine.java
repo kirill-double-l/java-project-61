@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 import hexlet.code.games.GCDGame;
+import hexlet.code.games.ProgressionGame;
 
 import java.util.Random;
 
@@ -11,11 +12,12 @@ public class Engine {
     private static final int EVEN_GAME = 2;
     private static final int CALC_GAME = 3;
     private static final int GCD_GAME = 4;
-    //private static final int EXIT = 0;
+    private static final int PROGRESSION_GAME = 5;
 
     public static void startGame() {
         System.out.println("Please enter the game number and press Enter");
-        System.out.println("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n0 - Exit");
+        System.out.println("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n"
+                + "5 - Progression\n0 - Exit");
         Cli.inputGame();
         System.out.println("Your choice: " + Cli.getGame());
 
@@ -31,6 +33,9 @@ public class Engine {
                 break;
             case GCD_GAME:
                 GCDGame.startGame();
+                break;
+            case PROGRESSION_GAME:
+                ProgressionGame.startGame();
                 break;
             default:
                 break;
