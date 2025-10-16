@@ -4,3 +4,5 @@
 [![SonarQube](https://github.com/kirill-double-l/java-project-61/actions/workflows/build.yml/badge.svg)](https://github.com/kirill-double-l/java-project-61/actions/workflows/build.yml)
 
 [![asciicast](https://asciinema.org/a/BCso813Z7gYzg2zrQ460DsGUg.svg)](https://asciinema.org/a/BCso813Z7gYzg2zrQ460DsGUg)
+
+[![asciicast](https://asciinema.org/a/DpviSpMomA8B2YxRVEAdkW5aw.svg)](https://asciinema.org/a/DpviSpMomA8B2YxRVEAdkW5aw)
