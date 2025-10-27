@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.CalcGame;
-import hexlet.code.games.EvenGame;
-import hexlet.code.games.GCDGame;
-import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.*;
 
 import java.util.Random;
 
@@ -13,11 +10,12 @@ public class Engine {
     private static final int CALC_GAME = 3;
     private static final int GCD_GAME = 4;
     private static final int PROGRESSION_GAME = 5;
+    private static final int PRIME_GAME = 6;
 
     public static void startGame() {
         System.out.println("Please enter the game number and press Enter");
         System.out.println("1 - Greet\n2 - Even\n3 - Calc\n4 - GCD\n"
-                + "5 - Progression\n0 - Exit");
+                + "5 - Progression\n6 - Prime\n0 - Exit");
         Cli.inputGame();
         System.out.println("Your choice: " + Cli.getGame());
 
@@ -36,6 +34,9 @@ public class Engine {
                 break;
             case PROGRESSION_GAME:
                 ProgressionGame.startGame();
+                break;
+            case PRIME_GAME:
+                PrimeGame.startGame();
                 break;
             default:
                 break;
@@ -59,5 +60,27 @@ public class Engine {
 
     public static void sayCongratulations() {
         System.out.println("Congratulations, " + Cli.getName() + "!");
+    }
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+
+        if (number <= 3) {
+            return true;
+        }
+
+        if (number % 2 == 0 || number % 3 == 0) {
+            return false;
+        }
+
+        for (int i = 5; i * i <= number; i += 6) {
+            if (number % i == 0 || number % (i + 2) == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
