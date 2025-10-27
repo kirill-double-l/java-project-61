@@ -10,6 +10,7 @@ public class GCDGame {
     private static final int RANDOM_RANGE = 101;
 
     public static void startGame() {
+        System.out.println();
         Engine.sayHello();
         System.out.println("Find the greatest common divisor of given numbers.");
 
@@ -27,7 +28,9 @@ public class GCDGame {
                 System.out.println("Correct!");
                 countUsersWin++;
             } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + answer + "'.");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + answer + "'.\n"
+                        + "Let's try again, " + Cli.getName() + "!");
+                return;
             }
             quantityUsersStage++;
         }

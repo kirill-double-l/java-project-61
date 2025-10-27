@@ -10,6 +10,7 @@ public class PrimeGame {
     private static int countUsersWin = 0;
 
     public static void startGame() {
+        System.out.println();
         Engine.sayHello();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
@@ -29,10 +30,12 @@ public class PrimeGame {
                 countUsersWin++;
             } else if (isAnswerCorrect & userAnswer.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
-                countUsersWin++;
+                System.out.println("Let's try again, " + Cli.getName() + "!");
+                return;
             } else {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
                 System.out.println("Let's try again, " + Cli.getName() + "!");
+                return;
             }
             quantityUsersStage++;
         }

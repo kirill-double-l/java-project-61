@@ -15,6 +15,7 @@ public class ProgressionGame {
     private static final int QUANTITY_ELEMENTS_OF_PROGRESSION = 10;
 
     public static void startGame() {
+        System.out.println();
         Engine.sayHello();
         System.out.println("What number is missing in the progression?");
 
@@ -32,7 +33,9 @@ public class ProgressionGame {
                 System.out.println("Correct!");
                 countUsersWin++;
             } else {
-                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + answer + "'.");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + answer + "'.\n"
+                        + "Let's try again, " + Cli.getName() + "!");
+                return;
             }
             quantityUsersStage++;
         }
