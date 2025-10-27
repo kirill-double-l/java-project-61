@@ -15,6 +15,7 @@ public class CalcGame {
     private static int result;
 
     public static void startGame() {
+        System.out.println();
         Engine.sayHello();
         System.out.println("What is the result of the expression?");
 
@@ -50,6 +51,7 @@ public class CalcGame {
             } else {
                 System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + result + "'.\n"
                         + "Let's try again, " + Cli.getName() + "!");
+                return;
             }
             quantityUsersStage++;
         }
