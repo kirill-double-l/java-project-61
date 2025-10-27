@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.GCDGame;
+import hexlet.code.games.PrimeGame;
+import hexlet.code.games.ProgressionGame;
 
 import java.util.Random;
 
@@ -11,6 +15,10 @@ public class Engine {
     private static final int GCD_GAME = 4;
     private static final int PROGRESSION_GAME = 5;
     private static final int PRIME_GAME = 6;
+    private static final int MIN_PRIME = 2;
+    private static final int FIRST_ODD_PRIME = 3;
+    private static final int PRIME_STEP = 6;
+    private static final int PRIME_FIVE = 5;
 
     public static void startGame() {
         System.out.println("Please enter the game number and press Enter");
@@ -63,19 +71,20 @@ public class Engine {
     }
 
     public static boolean isPrime(int number) {
-        if (number <= 1) {
+
+        if (number < MIN_PRIME) {
             return false;
         }
 
-        if (number <= 3) {
+        if (number <= FIRST_ODD_PRIME) {
             return true;
         }
 
-        if (number % 2 == 0 || number % 3 == 0) {
+        if (number % MIN_PRIME == 0 || number % FIRST_ODD_PRIME == 0) {
             return false;
         }
 
-        for (int i = 5; i * i <= number; i += 6) {
+        for (int i = PRIME_FIVE; i * i <= number; i += PRIME_STEP) {
             if (number % i == 0 || number % (i + 2) == 0) {
                 return false;
             }

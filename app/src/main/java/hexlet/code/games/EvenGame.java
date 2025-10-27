@@ -32,6 +32,9 @@ public class EvenGame {
             } else if (!isEven(random) && userAnswer.equals("no")) {
                 System.out.println("Correct!");
                 countUsersWin++;
+            } else if (isEven(random) && userAnswer.equals("no")) {
+                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
+                countUsersWin++;
             } else {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
                 System.out.println("Let's try again, " + Cli.getName() + "!");
