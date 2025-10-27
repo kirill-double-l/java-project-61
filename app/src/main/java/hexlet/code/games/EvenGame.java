@@ -14,15 +14,15 @@ public class EvenGame {
     }
 
     public static void startGame() {
+        System.out.println();
         Engine.sayHello();
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
         while (quantityUsersStage < QUANTITY_FOR_WIN) {
             int random = (int) (Math.random() * RANDOM_RATIO);
             System.out.println("Question: " + random);
             Cli.inputAnswer();
             String userAnswer = Cli.getAnswer();
-            //String userAnswer = scanner.nextLine();
 
             System.out.println("Your answer: " + userAnswer);
 
@@ -34,6 +34,7 @@ public class EvenGame {
                 countUsersWin++;
             } else if (isEven(random) && userAnswer.equals("no")) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
+                System.out.println("Let's try again, " + Cli.getName() + "!");
                 countUsersWin++;
             } else {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
